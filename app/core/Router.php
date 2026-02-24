@@ -25,8 +25,7 @@ class Router
         $controller = new $controllerclass();
 
         $funcion = $route['function'];
-        $controller->$funcion(...array_slice($matches, 1));
-
+        call_user_func_array(callback: [$controller,$funcion],args:$matches);
        return; 
      }
 
