@@ -23,6 +23,10 @@ class StudentController
         require_once '../app/views/students/show.php';
    }
 
-
+    public function edit(string $id)
+    {
+        // Logic untuk menampilkan form edit siswa berdasarkan ID
+        require_once '../app/views/students/edit.php';
+     }
 
 }
