@@ -17,6 +17,11 @@ class StudentController
         require_once '../app/views/students/create.php';
    }
 
+   public function show(string $id)
+   {
+        // Logic untuk menampilkan detail siswa berdasarkan ID
+        require_once '../app/views/students/show.php';
+   }
 
 
 
