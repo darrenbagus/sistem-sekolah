@@ -4,7 +4,7 @@ namespace App\Core;
 class Controller
 {
     // Controller logic here
-    public function __view(string $view, array $data = [])
+    public function view(string $view, array $data = [])
     {
         extract($data);
         $view = str_replace(
@@ -12,11 +12,13 @@ class Controller
             '/', 
             $view
         );
+
+        $content = "../app/views/{$view}.php";
+
         require_once "../app/views/{$view}.php";
-    }
 }
 
 
-
+}
 
 ?>
