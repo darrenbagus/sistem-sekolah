@@ -1,32 +1,32 @@
 <?php
 namespace App\Controllers;
+require_once '../app/core/Controller.php';
 
-class StudentController
+use App\Core\Controller;
+
+class StudentController extends Controller
 {
     public function index()
     {
-        require_once '../app/views/students/index.php';
+        $this->__view('students.index');
     }
     
 
-
-
-
     public function create()
    {
-        require_once '../app/views/students/create.php';
+        $this->__view('students.create');
    }
 
    public function show(string $id)
    {
         // Logic untuk menampilkan detail siswa berdasarkan ID
-        require_once '../app/views/students/show.php';
+        $this->__view('students.show', ['id' => $id]);
    }
 
     public function edit(string $id)
     {
         // Logic untuk menampilkan form edit siswa berdasarkan ID
-        require_once '../app/views/students/edit.php';
+        $this->__view('students.edit', ['id' => $id])  ;
      }
 
 }
