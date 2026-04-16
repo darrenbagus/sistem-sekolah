@@ -31,25 +31,25 @@
             <div class="space-y-2">
 
                 <label class="block font-bold" for="name">Name</label>
-                <input class="w-full px-4 py-2 border rounded-lg " type="text" id="name" placeholder="Masukkan nama" name="name" readonly>
+                <input value="<?= $student['name'] ?>" class="w-full px-4 py-2 border rounded-lg " type="text" id="name" placeholder="Masukkan nama" name="name" readonly>
             </div>
             
             <div class="space-y-2">
 
                 <label class="block font-bold" for="nis">Nis</label>
-                <input class="w-full px-4 py-2 border rounded-lg " type="text" id="nis" placeholder="Masukkan Nis" name="nis" readonly>
+                <input value="<?= $student['nis'] ?>" class="w-full px-4 py-2 border rounded-lg " type="text" id="nis" placeholder="Masukkan Nis" name="nis" readonly>
             </div>
 
             <div class="space-y-2">
 
                 <label class="block font-bold" for="kelas">Kelas</label>
-                <input class="w-full px-4 py-2 border rounded-lg " type="text" id="kelas" placeholder="Masukkan kelas" name="kelas" readonly>
+                <input value="<?= $student['class'] ?>" class="w-full px-4 py-2 border rounded-lg " type="text" id="kelas" placeholder="Masukkan kelas" name="kelas" readonly>
             </div>
 
             <div class="space-y-2">
 
                 <label class="block font-bold" for="telepon">Nomor Telepon</label>
-                <input class="w-full px-4 py-2 border rounded-lg " type="text" id="telepon" placeholder="Masukkan nomor telepon" name="telepon" readonly>
+                <input value="<?= $student['phone_number'] ?>"    class="w-full px-4 py-2 border rounded-lg " type="text" id="telepon" placeholder="Masukkan nomor telepon" name="telepon" readonly>
             </div>
 
             <div class="flex justify-end col-span-2 space-x-4 mt-4  ">
