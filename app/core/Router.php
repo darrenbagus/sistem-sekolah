@@ -21,6 +21,10 @@ public function run()
 {
  
     $method = $_SERVER['REQUEST_METHOD'];
+
+    if($method === 'POST' && isset($_POST['_method'])) {
+        $method = $_POST['_method'];
+    }
     $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
  
     foreach($this->routes as $route) {
@@ -32,7 +36,7 @@ public function run()
  
         $pattern = '#^'. $pattern . '$#';
  
-        if (preg_match($pattern, $uri, $matches)) {
+        if ($method === $route['method'] && preg_match($pattern, $uri, $matches)) {
              require_once '../app/controllers/' . $route['controller'] . '.php';
             array_shift($matches);
              $controllerClass = 'App\\Controllers\\' . $route['controller'];
